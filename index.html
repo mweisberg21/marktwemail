@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <script>
+        tailwind.config = {
+        darkMode: 'class',
+        }
+    </script>
+    <style>
+
+        input:checked ~ .dot {
+        transform: translateX(100%);
+        /* background-color: #132b50; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Dark Mode toggle-->
+<div class="p-5 bg-white dark:bg-gray-900 w-full justify-center flex flex-col items-center">
+    <div class="flex flex-row justify-between toggle">
+        <label for="dark-toggle" class="flex items-center cursor-pointer">
+            <div class="relative">
+            <input type="checkbox" name="dark-mode" id="dark-toggle" class="checkbox hidden">
+            <div class="block border-[1px] dark:border-white border-gray-900 w-14 h-8 rounded-full"></div>
+            <div class="dot absolute left-1 top-1 dark:bg-white bg-gray-800 w-6 h-6 rounded-full transition"></div>
+            </div>
+            <div class="ml-3 dark:text-white text-gray-900 font-medium">
+            Dark Mode
+            </div>
+        </label>
+        </div>
+    </div>
+    <!--background container-->
+    <div class="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
+    
+        
+        <!--card-->
+        <div class="-mt-48 bg-white dark:bg-gray-700 p-2 mx-6 rounded-2xl shadow-2xl">
+            <!--flex container-->
+            <div class="flex flex-col md:flex-row rounded-l-xl">
+                <!--Image-->
+                <img src="images/everything-you-need-know-about-fitness-1440x810.jpg" alt="image"
+                    class="object-fit rounded-xl h-80 md:h-64 md:rounded-l-xl  transform hover:scale-105 hover:rounded-xl duration-200" />
+                <!--Content-->
+                <div>
+                    <div class="p-6 md:p-12">
+                        <h2 class="text-2xl font-bold text-center text-slate-700 dark:text-slate-200 md:text-left">Get Diet and Fitness Tips Right to Your Inbox</h2>
+                        <p class="max-w-xs my-4 text-xs leading-5 tracking-wide text-center text-black dark:text-slate-200 md:text-left">
+                            Eat better and exercise better. Sign up for diet and fitness tips.
+                        </p>
+                        <div class="flex flex-col mt-5 space-y-4 md:space-x-3 md:flex-row md:space-y-0">
+                            <input type="text" placeholder="Enter Your Email Address" class="p-2 px-4 text-center rounded-md text-black bg-white border border-zinc-600 placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left focus:outline-none ">
+                        <button class="px-5 py-3 text-xs rounded-md text-black bg-[#c3d7d5] hover:scale-105 hover:bg-slate-500 dark:bg-slate-400 dark:hover:bg-slate-300 dark:hover:text-black hover:text-white duration-500">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+<div class="flex items-center justify-center">Built By Mark</div>
+
+
+    <script>
+        function darkModeListener() {
+        document.querySelector("html").classList.toggle("dark");
+        }
+    
+        document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+    
+    </script>
+</body>
+
+</html>

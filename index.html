@@ -17,13 +17,21 @@
         transform: translateX(100%);
         /* background-color: #132b50; */
         }
+
+        .dark-mode-toggle-container {
+    position: fixed;
+    bottom: 20px; /* Adjust the value as needed */
+    right: 20px; /* Adjust the value as needed */
+    z-index: 1000; /* Ensures it stays above other content */
+}
     </style>
 </head>
 
 <body>
 
     <!--Dark Mode toggle-->
-<div class="p-5 bg-white dark:bg-gray-900 w-full justify-center flex flex-col items-center">
+<div class="dark-mode-toggle-container">
+    <div class="p-5 bg-white dark:bg-gray-900 w-full justify-center flex flex-col items-center">
     <div class="flex flex-row justify-between toggle">
         <label for="dark-toggle" class="flex items-center cursor-pointer">
             <div class="relative">
@@ -37,6 +45,7 @@
         </label>
         </div>
     </div>
+</div>
     <!--background container-->
     <div class="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900">
     
@@ -65,7 +74,7 @@
         </div>
    
     </div>
-<div class="flex items-center justify-center dark:bg-gray-900 dark:text-white">Built By Mark</div>
+<div class="flex items-center justify-center fixed bottom-12 left-0 right-0 mx-auto left dark:bg-gray-900 dark:text-white">Built By Mark</div>
 
 
     <script>
